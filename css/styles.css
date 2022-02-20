@@ -1,0 +1,239 @@
+/* #212121 заголовки
+#757575 текст р
+#2196F3 кнопка в герое ссылки ховер часть лого
+#FFFFFF адрес в футере, н1 в герое, кнопки в ховере лого в футере
+#000000 лого в навигации
+
+E5E5E5  основной почти белый секция особенности и все портфолио
+F5F4FA наша команда 
+2F303A герой и футер 
+FFFFFF навигация ;*/
+
+:root {
+  --primary-text-color: #757575;
+  --titel-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+}
+
+/* body */
+.body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.header {
+  background-color: var(--primary-white-color);
+}
+/* logo */
+.logo {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.logo-primary {
+  color: var(--accent-color);
+}
+.logo-secondary {
+  color: #000000;
+}
+.logo-tertiary {
+  color: var(--primary-white-color);
+}
+
+/* подсветка активной страницы ??? */
+.nav-link.current {
+  color: var(--accent-color);
+}
+
+/* навигация */
+
+.site-nav {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  list-style: none;
+}
+
+.nav-address {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  list-style: none;
+}
+
+.nav-link,
+.logo {
+  color: var(--titel-text-color);
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+
+.nav-mail,
+.nav-tel {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-mail:hover,
+.nav-mail:focus,
+.nav-tel:hover,
+.nav-tel:focus {
+  color: #2196f3;
+}
+
+/* секция герой */
+
+.hero-titel {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.hero,
+.footer {
+  background-color: #2f303a;
+}
+
+.hero-btn {
+  font-family: "Roboto", sans-serif;
+  /* font-family: inherit что бы кнопка наследовало */
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.85;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
+.hero-btn:hover {
+  background-color: #188ce8;
+}
+
+/* секция особенности */
+.peculiarities-titel {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--titel-text-color);
+}
+
+.peculiarities-disc {
+  line-height: 1.7;
+}
+
+/* секция наша команда */
+.team {
+  background-color: #f5f4fa;
+}
+
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+}
+.team-position {
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+/*  убрать точки у списков */
+.list {
+  list-style-type: none;
+}
+
+/* заголовки h2 */
+.disc-titel,
+.team-titel {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.team-titel,
+.team-name,
+.heading-title,
+.disc-titel {
+  color: var(--titel-text-color);
+}
+
+/* портфолио фильтр кнопки */
+.filter-btn {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  color: var(--titel-text-color);
+  background-color: #f5f4fa;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* убрать подчеркивание */
+.project-link,
+.footer-maps {
+  text-decoration: none;
+}
+
+.portfolio-title {
+  color: var(--primary-text-color);
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+.heading-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+/* футер для двух страниц */
+.footer-address {
+  font-style: normal;
+}
+
+.footer-list {
+  list-style: none;
+}
+.footer-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-maps {
+  color: var(--primary-white-color);
+}
+.footer-maps:hover,
+.footer-maps:focus {
+  color: var(--accent-color);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color);
+}
