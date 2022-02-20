@@ -18,18 +18,31 @@ FFFFFF навигация ;*/
 
 /* body */
 .body {
+  /* убрать 8 px марджина авто от браузера
+  margin: 0 не нужно потому что есть normolise css */
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  font-weight: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
+/*  убрать точки у списков, сброс отступов */
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   background-color: var(--primary-white-color);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
 }
 /* logo */
 .logo {
@@ -56,6 +69,9 @@ FFFFFF навигация ;*/
 /* навигация */
 
 .site-nav {
+  display: flex;
+  margin-left: 93px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -63,11 +79,33 @@ FFFFFF навигация ;*/
   list-style: none;
 }
 
+.site-nav .item {
+  margin-right: 50px;
+}
+
+.site-nav .item:last-child {
+  margin-right: 0;
+}
+
 .nav-address {
+  display: flex;
+  margin-left: auto;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
+}
+
+/* дай отступ соседу. при добавлении кнопок не нужно будет редактировать что-то типа last child */
+.nav-address .item + .item {
+  margin-left: 50px;
+}
+
+.nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav-link,
@@ -96,14 +134,20 @@ FFFFFF навигация ;*/
 
 /* секция герой */
 
+.hero {
+  text-align: center;
+}
+
 .hero-titel {
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--primary-white-color);
 }
 
 .hero,
@@ -121,6 +165,11 @@ FFFFFF навигация ;*/
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: none;
+  min-width: 200px;
+  text-align: center;
 }
 .hero-btn:hover {
   background-color: #188ce8;
@@ -128,34 +177,86 @@ FFFFFF навигация ;*/
 
 /* секция особенности */
 .peculiarities-titel {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--titel-text-color);
 }
 
+.peculiarities-list {
+  display: flex;
+}
+
 .peculiarities-disc {
+  margin: 0;
+  padding: 0;
   line-height: 1.7;
+}
+
+.container-peculiariries {
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.disc-titel {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  text-align: center;
+}
+
+.container-discription {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 94px;
 }
 
 /* секция наша команда */
 .team {
   background-color: #f5f4fa;
 }
+.container-team {
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 186px;
+  padding-bottom: 94px;
+}
+
+.team-titel {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+  text-align: center;
+}
 
 .team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 .team-position {
   font-size: 16px;
   line-height: 1.18;
-}
-
-/*  убрать точки у списков */
-.list {
-  list-style-type: none;
+  padding-bottom: 30px;
+  margin: 0;
 }
 
 /* заголовки h2 */
@@ -164,7 +265,6 @@ FFFFFF навигация ;*/
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
-  text-align: center;
 }
 
 .team-titel,
@@ -175,6 +275,21 @@ FFFFFF навигация ;*/
 }
 
 /* портфолио фильтр кнопки */
+
+.container-filters {
+  margin-bottom: 34px;
+
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.filters {
+  display: flex;
+}
+
 .filter-btn {
   font-family: Roboto;
   font-weight: 500;
@@ -182,7 +297,13 @@ FFFFFF навигация ;*/
   line-height: 1.62;
   text-align: center;
   color: var(--titel-text-color);
-  background-color: #f5f4fa;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: none;
+  min-width: 73px;
+  max-width: 145px;
+  text-align: center;
 }
 
 .filter-btn:hover,
@@ -198,7 +319,35 @@ FFFFFF навигация ;*/
   text-decoration: none;
 }
 
+.container-examples {
+  width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  outline: 2px solid red;
+}
+
+.project-list {
+  margin-right: 0px;
+  width: calc((100%-60px) / 3);
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .projects:nth-child(3n) {
+  margin-right: 0;
+}
+
+.projects:nth-child(-n + 3) {
+  margin-right: 0;
+} */
+
 .portfolio-title {
+  margin: 0;
+  padding-bottom: 20px;
   color: var(--primary-text-color);
   font-family: Roboto;
   font-size: 16px;
@@ -206,6 +355,9 @@ FFFFFF навигация ;*/
 }
 
 .heading-title {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -236,4 +388,19 @@ FFFFFF навигация ;*/
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent-color);
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hero,
+.container,
+.container-peculiariries,
+.container-team {
+  outline: 2px solid red;
 }
