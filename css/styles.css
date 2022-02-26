@@ -36,6 +36,21 @@ FFFFFF навигация ;*/
   padding: 0;
 }
 
+/* скрыть заголовки */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .header {
   background-color: var(--primary-white-color);
   border-bottom: 1px solid #ececec;
@@ -140,13 +155,16 @@ FFFFFF навигация ;*/
 
 .hero {
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-titel {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
+  margin-bottom: 0;
+  padding-bottom: 30px;
   width: 696px;
 
   font-weight: 900;
@@ -183,6 +201,13 @@ FFFFFF навигация ;*/
 }
 
 /* секция особенности */
+.peculiarities {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .peculiarities-titel {
   margin-top: 0;
   margin-bottom: 10px;
@@ -194,11 +219,21 @@ FFFFFF навигация ;*/
 
 .peculiarities-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .peculiarities-item {
   width: 270px;
+  margin-right: 30px;
 }
+
+.peculiarities-item:nth-child(4n) {
+  margin-right: 0px;
+}
+/* .peculiarities-item. .items + .items {
+  margin-right: 0px;
+} */
 
 .peculiarities-disc {
   margin: 0;
@@ -211,21 +246,20 @@ FFFFFF навигация ;*/
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 /* секция чем мы занимаемся */
+
+.discription {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 94px;
+}
 
 .container-discription {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 94px;
 }
 
 .disc-titel {
@@ -237,6 +271,8 @@ FFFFFF навигация ;*/
 
 .disc-list {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .disc-item {
@@ -247,22 +283,32 @@ FFFFFF навигация ;*/
   margin-right: 0;
 }
 
+.disc-picture {
+  display: inline-block;
+}
+
 /* секция наша команда */
 .team {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
   background-color: #f5f4fa;
 }
 .container-team {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 186px;
-  padding-bottom: 94px;
 }
 
 .team-list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .team-item {
@@ -272,9 +318,14 @@ FFFFFF навигация ;*/
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-item:nth-child(4n) {
+  margin-right: 0px;
+}
+
 .team-titel {
   margin: 0;
   padding: 0;
+
   margin-bottom: 50px;
   text-align: center;
 }
@@ -297,7 +348,6 @@ FFFFFF навигация ;*/
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
-  max-width: 270px;
 }
 
 .team-photo {
@@ -435,9 +485,6 @@ FFFFFF навигация ;*/
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent-color);
-}
-
-.footer-item {
 }
 
 .container-footer {
