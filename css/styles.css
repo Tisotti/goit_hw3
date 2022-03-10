@@ -219,8 +219,6 @@ FFFFFF навигация ;*/
 
 .peculiarities-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .peculiarities-item {
@@ -251,8 +249,6 @@ FFFFFF навигация ;*/
 /* секция чем мы занимаемся */
 
 .discription {
-  padding-left: 15px;
-  padding-right: 15px;
   padding-bottom: 94px;
 }
 
@@ -271,8 +267,6 @@ FFFFFF навигация ;*/
 
 .disc-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .disc-item {
@@ -287,10 +281,12 @@ FFFFFF навигация ;*/
   display: inline-block;
 }
 
+img {
+  display: block;
+}
+
 /* секция наша команда */
 .team {
-  padding-left: 15px;
-  padding-right: 15px;
   padding-top: 94px;
   padding-bottom: 94px;
 
@@ -307,8 +303,6 @@ FFFFFF навигация ;*/
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .team-item {
